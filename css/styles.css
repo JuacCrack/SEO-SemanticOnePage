@@ -1,0 +1,619 @@
+/* IMPORT */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+
+/* HTML */
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+    margin: 0;
+}
+
+p {
+    color: gray;
+}
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+a {
+    color: black;
+    margin: 0;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* FONTS */
+
+/* UTILS */
+
+.center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.title-container {
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+}
+
+.overline {
+    display: block;
+    width: 150px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: black;
+    margin: auto auto 15px auto;
+}
+
+.border-b {
+    border-bottom: 1px black solid;
+}
+
+.none-scroll {
+    overflow: hidden;
+}
+
+.none-scroll {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: auto;
+}
+
+.animate-show {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-show-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* HEADER */ 
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+header nav {
+    width: 75%;
+    height: 100%;
+}
+
+header nav ul {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    list-style-type: none; 
+    padding: 0;
+}
+
+header nav ul li {
+    display: flex;
+    margin: 0;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.logo {
+    width: 25%;
+    height: 100%;
+}
+
+.extra-menu {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    left: 12.5vw;
+    top: 80px;
+    background-color: #e5e5e5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: height 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ease-height {
+    width: 75vw;
+    visibility: visible;
+    opacity: 1;
+    height: max-content;
+    transition: height 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.extra-menu-nav {
+    width: 100%;
+    height: 100%;
+}
+
+.extra-menu-ul {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: start;
+}
+
+.extra-menu-ul li {
+    width: 75vw;
+    height: 2.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 0 0 1rem;
+}
+
+/* HOME */
+
+.home {
+    position: relative;
+}
+
+.home-bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.home article {
+    position: absolute;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.home article h1 {
+    font-size: 50px;
+}
+
+/* ABOUT */
+
+.about {
+    background-color: transparent;
+}
+
+.about-content {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-content article {
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    padding: 50px;
+    flex: 1;
+    order: 1;
+}
+
+.about-content figure {
+    width: 100%;
+    height: 40%;
+    flex: 1;
+    order: 2; 
+}
+
+/* SERVICES */
+
+.services {
+    background-color: transparent;
+}
+
+.services-flexbox {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.service-card {
+    width: 30%; 
+    height: 300px;
+    margin: auto;
+    box-sizing: border-box; 
+    text-align: center;
+    border: 1px rgb(190, 190, 190) solid;
+    border-radius: 3px;
+}
+
+.service-img {
+    width: 100%;
+    height: 50%;
+}
+
+.service-img figure{
+    width: 125px;
+    height: 125px;
+}
+
+.service-details {
+    width: 100%;
+    height: 50%;
+    padding: 1rem;
+}
+
+/* REVIEW */
+
+.review {
+    background-color: transparent;
+}
+
+.review-container {
+    width: 100%;
+    height: 85%;
+}
+
+.review-card {
+    width: 75%;
+    height: 75%;
+    border: 1px rgb(190, 190, 190) solid;
+}
+
+.review-card figure{
+    width: 100%;
+    height: 40%;
+}
+
+.review-card figure img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.review-card article{
+    width: 100%;
+    height: 60%;
+    padding: 3rem;
+    text-align: center;
+}
+
+.review-card article h3{
+    margin: 1rem auto 0 auto;
+}
+
+/* GALLERY */
+
+.gallery {
+    background-color: transparent;
+}
+
+.gallery-flexbox {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 1rem;
+}
+
+.gallery-flexbox figure {
+    border: 1px rgb(190, 190, 190) solid;
+    margin: 5px 0px 5px 0px;
+}
+
+/* CONTACT */
+
+.contact {
+    height: max-content;
+    padding: 4rem 2rem;
+}
+
+.contact-form {
+    width: 500px;
+    height: 50%;
+}
+
+.contact-form form {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contact-form form h3{
+    margin-bottom: 1rem;
+}
+
+.contact-form form label {
+    display: block;
+    margin: 5px 0;
+}
+
+.contact-form form button{
+    display: block;
+    width: 6rem;
+    height: 2rem;
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px gray solid;
+    border-radius: 2px;
+}
+
+.contact-form form input{
+    width: 85%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px gray solid;
+}
+
+.contact-form form textarea{
+    width: 85%;
+    height: 5rem;
+    resize: none;
+    border-radius: 5px;
+    border: 1px gray solid;
+}
+
+.contact aside {
+    padding: 2rem 0;
+}
+
+.contact aside p {
+    margin: 1rem 0;
+}
+
+.contact aside p strong i {
+    color: black;
+}
+
+.contact aside nav ul {
+    margin: 2rem 0%;
+    padding: 0%;
+    list-style-type: none; 
+    display: flex;
+}
+
+.contact aside nav ul li {
+    margin: 0 5px;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    height: 15vh;
+}
+
+/* RESPONSEVE PEQUEÑAS */
+
+@media screen and (min-width: 1px) and (max-width: 424px) {
+
+    .logo-main {
+        width: 40%;
+    } 
+
+    .service-card {
+        width: 65%; 
+        margin: 30px auto 30px auto;
+        height: 385px;
+    }
+
+    .services {
+        height: max-content !important;
+    }
+
+    .about {
+        height: max-content;
+    }
+
+    .about-content article {
+        order: 1;
+        flex: 100%;
+        padding: 25px;
+    }
+    
+    .about-content figure {
+        order: 2;
+        flex: 100%;
+        height: 250px;
+    }
+
+    .review-card article {
+        padding: 1rem;
+    }
+
+    .none {
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    .menu {
+        margin-left: auto;
+        width: 20%;
+    }
+
+    .menu-icon {
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+
+    .gallery {
+        height: max-content;
+    }
+
+    .gallery-flexbox figure {
+        width: 100%; 
+        height: 150px;
+    }
+
+    .contact {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        width: 325px;
+    }
+
+}
+
+/* PANTALLAS MEDIANAS */
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .service-card {
+        width: 65%; 
+        margin: 30px auto 30px auto;
+        height: 385px;
+    }
+
+    .services {
+        height: max-content !important;
+    }
+    
+    .about-content article {
+        order: 1;
+        flex: 100%;
+    }
+    
+    .about-content figure {
+        order: 2;
+        flex: 100%;
+    }
+
+    .none {
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    .menu {
+        margin-left: auto;
+        width: 15%;
+    }
+
+    .menu-icon {
+        font-size: 2.3rem;
+        cursor: pointer;
+    }
+
+    .none-scroll {
+        overflow: hidden;
+    }
+
+    .gallery-flexbox figure {
+        width: calc(33.33% - 10px);
+    }
+
+    .carousel-arrow-prev {
+        left: 15px !important;
+    }
+
+    .carousel-arrow-next {
+        right: 15px !important;
+    }
+
+}
+ 
+
+/* PANTALLAS GRANDES */
+
+@media (min-width: 1025px) {
+    .about-content article {
+        height: 100%;
+    }
+    
+    .about-content figure {
+        height: 100%;
+    }
+
+    .menu {
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    .extra-menu {
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    .gallery-flexbox figure {
+        width: calc(33.33% - 10px); 
+    }
+
+    .contact {
+        display: flex;
+    }
+
+    .carousel-arrow-prev {
+        left: 50px !important;
+    }
+
+    .carousel-arrow-next {
+        right: 50px !important;
+    }
+
+}
+  
