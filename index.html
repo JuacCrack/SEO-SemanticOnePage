@@ -2,30 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tu Sitio Web</title>
+    <title>SEO PROTO</title>
     <meta name="description" content="Descripción de tu sitio web">
     <meta name="keywords" content="palabras clave, SEO, HTML5, ejemplo">
     <link rel="canonical" href="https://www.tusitio.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+    <div class="popup-container center" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <div class="logo logo-main center">
-            <img src="logo.png" alt="Logo-Empresa">
+            <figure class="center">
+                <img src="img/logo-3.png" alt="Logo-Empresa" id="home-back">
+                <figcaption></figcaption>
+            </figure>
         </div>
         <nav class="none">
             <ul class="center">
                 <li><a class="ease-href" href="#about">About</a></li>
                 <li><a class="ease-href" href="#services">Services</a></li>
                 <li><a class="ease-href" href="#review">Review</a></li>
-                <li><a class="ease-href" href="#gallery">Gallery</a></li>
+                <li style="display: none;"><a class="ease-href" href="#gallery">Gallery</a></li>
                 <li><a class="ease-href" href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="logo center menu">
             <label for="menu"><i class="bi bi-list menu-icon"></i></label>
-            <input type="checkbox" name="menu" id="menu">
+            <button class="hidden" title="menu" type="button" id="menu"></button>
         </div>
         <div class="extra-menu">
             <nav class="extra-menu-nav">
@@ -33,41 +46,43 @@
                     <li class="border-b"><a class="ease-href" href="#about">About</a></li>
                     <li class="border-b"><a class="ease-href" href="#services">Services</a></li>
                     <li class="border-b"><a class="ease-href" href="#review">Review</a></li>
-                    <li class="border-b"><a class="ease-href" href="#gallery">Gallery</a></li>
+                    <li style="display: none;" class="border-b"><a class="ease-href" href="#gallery">Gallery</a></li>
                     <li><a class="ease-href" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>        
     </header>
+    
     <main>
 
         <section class="home center" id="home">
-            <div style="background-color: red;" class="home-bg"></div>
-            <div style="background-color: green;" class="home-bg"></div>
-            <div style="background-color: blue;" class="home-bg"></div>
+            <div id="slide-1" class="home-bg"></div>
+            <div id="slide-2" class="home-bg"></div>
+            <div id="slide-3" class="home-bg"></div>
             <article>
-                <h1>Main Title</h1>
-                <p>Contenido de la página de inicio.</p>
+                <h2>Pablo Canta</h2>
+                <h1>MAIN TITLE</h1>
+                <a href="#contact" class="ease-href">Contact</a>
             </article>
         </section>
 
         <section class="about" id="about">
             <div class="title-container center">
                 <div>
-                    <span class="overline"></span>
-                    <h2>About Us</h2>
+                    <div class="overline"></div>
+                    <h3>About Us</h3>
                 </div>
             </div>
             <div class="about-content">
                 <article>
+                    <h4 class="hidden">About Us</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae mattis nibh. Nullam vel urna nec urna tincidunt egestas. Aenean et tortor faucibus, condimentum orci et, congue ex. Etiam luctus risus ligula, et lacinia diam facilisis ac. Aliquam pulvinar magna in volutpat porttitor. In quis cursus eros. Fusce lobortis dui porttitor faucibus dictum. Integer molestie ex quis tortor imperdiet, quis cursus diam finibus. Vivamus quis pulvinar massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae mattis nibh. Nullam vel urna nec urna tincidunt egestas. Aenean et tortor faucibus, condimentum orci et, congue ex. Etiam luctus risus ligula, et lacinia diam facilisis ac. Aliquam pulvinar magna in volutpat porttitor. In quis cursus eros. Fusce lobortis dui porttitor faucibus dictum. Integer molestie ex quis tortor imperdiet, quis cursus diam finibus. Vivamus quis pulvinar massa.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae mattis nibh. Nullam vel urna nec urna tincidunt egestas. Aenean et tortor faucibus, condimentum orci et, congue ex. Etiam luctus risus ligula, et lacinia diam facilisis ac. Aliquam pulvinar magna in volutpat porttitor. In quis cursus eros. Fusce lobortis dui porttitor faucibus dictum. Integer molestie ex quis tortor imperdiet, quis cursus diam finibus. Vivamus quis pulvinar massa.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
                     </p>
                 </article>
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="img/3s.jpg" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
             </div>
         </section>
@@ -76,8 +91,8 @@
 
             <div class="title-container center">
                 <div>
-                    <span class="overline"></span>
-                    <h2>Our Services</h2>
+                    <div class="overline"></div>
+                    <h3>Our Services</h3>
                 </div>
             </div>
 
@@ -86,12 +101,13 @@
                 <div class="service-card">
                     <div class="service-img center">
                         <figure>
-                            <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                            <img src="img/file-text.svg" alt="Descripción de la imagen 1">
+                            <figcaption>Descripción de la imagen 1</figcaption>
                         </figure>
                     </div>
                     <div class="service-details center">
                         <article>
-                            <h3>Service Title</h3>
+                            <h4>Service Title</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
                             </p>
@@ -102,12 +118,13 @@
                 <div class="service-card">
                     <div class="service-img center">
                         <figure>
-                            <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                            <img src="img/box-seam.svg" alt="Descripción de la imagen 1">
+                            <figcaption>Descripción de la imagen 1</figcaption>
                         </figure>
                     </div>
                     <div class="service-details center">
                         <article>
-                            <h3>Service Title</h3>
+                            <h4>Service Title</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
                             </p>
@@ -118,12 +135,13 @@
                 <div class="service-card">
                     <div class="service-img center">
                         <figure>
-                            <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                            <img src="img/patch-check.svg" alt="Descripción de la imagen 1">
+                            <figcaption>Descripción de la imagen 1</figcaption>
                         </figure>
                     </div>
                     <div class="service-details center">
                         <article>
-                            <h3>Service Title</h3>
+                            <h4>Service Title</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
                             </p>
@@ -134,12 +152,13 @@
                 <div class="service-card">
                     <div class="service-img center">
                         <figure>
-                            <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                            <img src="img/person.svg" alt="Descripción de la imagen 1">
+                            <figcaption>Descripción de la imagen 1</figcaption>
                         </figure>
                     </div>
                     <div class="service-details center">
                         <article>
-                            <h3>Service Title</h3>
+                            <h4>Service Title</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
                             </p>
@@ -150,12 +169,13 @@
                 <div class="service-card">
                     <div class="service-img center">
                         <figure>
-                            <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                            <img src="img/water.svg" alt="Descripción de la imagen 1">
+                            <figcaption>Descripción de la imagen 1</figcaption>
                         </figure>
                     </div>
                     <div class="service-details center">
                         <article>
-                            <h3>Service Title</h3>
+                            <h4>Service Title</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
                             </p>
@@ -166,12 +186,13 @@
                 <div class="service-card">
                     <div class="service-img center">
                         <figure>
-                            <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                            <img src="img/ubuntu.svg" alt="Descripción de la imagen 1">
+                            <figcaption>Descripción de la imagen 1</figcaption>
                         </figure>
                     </div>
                     <div class="service-details center">
                         <article>
-                            <h3>Service Title</h3>
+                            <h4>Service Title</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
                             </p>
@@ -186,53 +207,56 @@
         <section class="review" id="review">
             <div class="title-container center">
                 <div>
-                    <span class="overline"></span>
-                    <h2>Reviews</h2>
+                    <div class="overline"></div>
+                    <h3>Reviews</h3>
                 </div>
             </div>
             <div class="review-container center">
 
                 <div class="review-card">
                     <figure class="center">
-                        <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                        <img src="img/author.jpg" alt="Descripción de la imagen 1">
+                        <figcaption>Descripción de la imagen 1</figcaption>
                     </figure>
                     <article class="center">
                         <div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
+                               " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                             </p>
-                            <h3>interviewed 1</h3>
+                            <h4>interviewed 1</h4>
                         </div>
                     </article>
                 </div>
 
                 <div class="review-card">
                     <figure class="center">
-                        <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                        <img src="img/author.jpg" alt="Descripción de la imagen 1">
+                        <figcaption>Descripción de la imagen 1</figcaption>
                     </figure>
                     <article class="center">
                         <div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
+                               " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                             </p>
-                            <h3>interviewed 2</h3>
+                            <h4>interviewed 2</h4>
                         </div>
                     </article>
                 </div>
 
                 <div class="review-card">
                     <figure class="center">
-                        <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                        <img src="img/member-1.jpg" alt="Descripción de la imagen 1">
+                        <figcaption>Descripción de la imagen 1</figcaption>
                     </figure>
                     <article class="center">
                         <div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
+                               " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor nisi ex, in malesuada lacus scelerisque nec. Phasellus non orci nec eros lobortis volutpat.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                             </p>
-                            <h3>interviewed 3</h3>
+                            <h4>interviewed 3</h4>
                         </div>
                     </article>
                 </div>
@@ -243,39 +267,48 @@
         <section class="gallery" id="gallery">
             <div class="title-container center">
                 <div>
-                    <span class="overline"></span>
-                    <h2>Gallery</h2>
+                    <div class="overline"></div>
+                    <h3>Gallery</h3>
                 </div>
             </div>
 
             <div class="gallery-flexbox">
 
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
                 <figure class="center">
-                    <img src="imagen2.jpg" alt="Descripción de la imagen 2">
+                    <img src="" alt="Descripción de la imagen 2">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
                 <figure class="center">
-                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <img src="" alt="Descripción de la imagen 1">
+                    <figcaption>Descripción de la imagen 1</figcaption>
                 </figure>
 
             </div>
@@ -286,10 +319,10 @@
                 <form action="process_form.php" method="post">
                     <h3>Contact Form</h3>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" autocomplete="name" id="name" name="name" required>
         
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" autocomplete="email" id="email" name="email" required>
         
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
@@ -307,13 +340,13 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href="#"  aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                         </li>
                     </ul>
                 </nav>

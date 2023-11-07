@@ -1,18 +1,33 @@
- function mostrarMenu() {
-    let menuCheckbox = document.getElementById("menu");
+function redireccionar() {
+    window.location.href = "#preloader";
+    setTimeout(function() {
+    window.location.href = "#";
+    }, 1500);
+}
+redireccionar();
+
+let menuIsOpen = false;
+
+function mostrarMenu() {
+    let menuButton = document.getElementById("menu");
     let header = document.querySelector("header");
     let extraMenu = document.querySelector(".extra-menu");
     let body = document.querySelector("body");
-    menuCheckbox.addEventListener("change", function() {
-        header.style.opacity = "1";
-        if (menuCheckbox.checked) {
-            extraMenu.classList.add("ease-height");
-            body.classList.add("none-scroll");
-        } else {
+    
+    function toggleMenu() {
+        if (menuIsOpen) {
             extraMenu.classList.remove("ease-height");
             body.classList.remove("none-scroll");
+            header.style.opacity = "1";
+        } else {
+            extraMenu.classList.add("ease-height");
+            body.classList.add("none-scroll");
+            header.style.opacity = "1";
         }
-    });
+        menuIsOpen = !menuIsOpen;
+    }
+    
+    menuButton.addEventListener("click", toggleMenu);
 }
 
 function smoothScrollAnimation(event) {
@@ -22,7 +37,6 @@ function smoothScrollAnimation(event) {
     const targetElement = document.querySelector(href);
     let body = document.querySelector("body");
     let extraMenu = document.querySelector(".extra-menu");
-    let menuCheckbox = document.getElementById("menu");
     
     if (targetElement) {
         const targetOffset = targetElement.getBoundingClientRect().top + window.scrollY;
@@ -57,9 +71,7 @@ function smoothScrollAnimation(event) {
         body.classList.add("overflow-scroll");
         extraMenu.classList.remove("ease-height");
 
-        if (menuCheckbox) {
-            menuCheckbox.checked = false;
-        }
+        menuIsOpen = !menuIsOpen;
         
         requestAnimationFrame(animate);
     }
@@ -120,7 +132,7 @@ function createCarousel(carouselSelector, autoplay = false, interval = 3000, arr
     slides.forEach(slide => {
         slide.style.opacity = 0;
         slide.style.position = "absolute";
-        slide.style.transition = "opacity 0.5s";
+        slide.style.transition = "opacity 1s ease-in-out";
     });
 
     function changeSlide(direction) {
@@ -153,9 +165,9 @@ function createCarousel(carouselSelector, autoplay = false, interval = 3000, arr
 }
 
 function OnloadPage() {
-    mostrarMenu();
     createCarousel(".review-container", true, 10000, true);
     createCarousel(".home", true, 5000, false);
+    mostrarMenu();
 }
 
 document.addEventListener("DOMContentLoaded", OnloadPage);
@@ -172,5 +184,45 @@ document.body.onscroll = function() {
     }
     lastScroll = window.scrollY;
 };
+
+var homeBackLink = document.getElementById("home-back");
+
+function scrollToTop() {
+    const startPosition = window.scrollY;
+    const distance = -startPosition;
+    const duration = 500;
+
+    let startTime;
+
+    function animate(currentTime) {
+        if (!startTime) {
+            startTime = currentTime;
+        }
+
+        const timeElapsed = currentTime - startTime;
+        const scrollPosition = easeInOut(timeElapsed, startPosition, distance, duration);
+
+        window.scrollTo(0, scrollPosition);
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animate);
+        }
+    }
+
+    function easeInOut(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animate);
+}
+
+var homeBackLink = document.getElementById("home-back");
+homeBackLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    scrollToTop();
+});
 
 
